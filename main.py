@@ -1,13 +1,17 @@
 from tkinter import *
-
+from tkinter import messagebox
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
+
     website = website_input.get()
     password = password_input.get()
     email = email_input.get()
+
+    messagebox.showinfo(title="Title", message="Message")
+
     # writes password to file
     with open("data.txt", "a") as data_file:
         data_file.write(f"{website} | {email} | {password}\n")
